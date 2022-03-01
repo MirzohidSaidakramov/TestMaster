@@ -1,0 +1,23 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor = "let part of parts">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{part.Part}}
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+      <div *ngFor = "let test of tests">
+        <div *ngIf = "test.parts === part.Part" class="badge" > <a [routerLink]="['/playtest',test.id1]">{{test.tests}}</a></div>
+
+
+      </div>
+
+
+  </mat-expansion-panel>
+
+
+
+</mat-accordion>

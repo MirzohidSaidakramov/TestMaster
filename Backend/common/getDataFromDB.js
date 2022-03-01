@@ -28,17 +28,19 @@ const PartSchema = mongoose.Schema({
 });
 
 //model tuzish
-const Answer = mongoose.model("Answer", AnswerSchema);
-const Question = mongoose.model("Question", QuestionSchema);
+const Answer = mongoose.model("answer", AnswerSchema);
+const Question = mongoose.model("question", QuestionSchema);
 const Tests = mongoose.model("tests", testsSchema);
-const Part = mongoose.model("Part", PartSchema);
+const Part = mongoose.model("part", PartSchema);
+
+
 
 
 
 //mongoDbdan "part" bo'yicha testlarni olish
-async function getTestsByPart(part) {
+async function getTestsByPart() {
     const test = await Tests.find({
-        parts: part
+        
     });
     return test;
 

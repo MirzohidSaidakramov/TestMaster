@@ -4,14 +4,22 @@
   "description": "Backend TestMaster",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.13.2"
   },
   "author": "MG",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
+    "helmet": "^5.0.2",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.1",
