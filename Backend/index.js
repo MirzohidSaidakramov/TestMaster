@@ -34,9 +34,15 @@ app.use(helmet());
 app.use(compression());
 
 // routerlani aniqlash
+app.get('/', async (req, res) => {
+    res.send('Backend for  <a href = "https://testmasterfrontend.herokuapp.com/">Test Master</a>');
+   
+
+});
+
 app.get('/parts', async (req, res) => {
     res.send(await getDataFromDb.getPart());
-    winston.info(getDataFromDb.getPart());
+   
 
 });
 
